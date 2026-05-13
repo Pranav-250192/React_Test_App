@@ -1,0 +1,61 @@
+.card {
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin-bottom: 12px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.count {
+  font-size: 32px;
+  font-weight: 600;
+  min-width: 48px;
+  text-align: center;
+}
+
+.reset {
+  margin-left: auto;
+  font-size: 13px;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #52525b;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.positive {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.negative {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.zero {
+  background: #f4f4f5;
+  color: #71717a;
+}

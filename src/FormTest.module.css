@@ -1,0 +1,33 @@
+.card {
+  background: #fff;
+  border: 1px solid #e4e4e7;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin-bottom: 12px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form button {
+  align-self: flex-start;
+}
+
+.success {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #15803d;
+  background: #dcfce7;
+  border-radius: 6px;
+  padding: 8px 12px;
+}

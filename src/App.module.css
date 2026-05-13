@@ -1,0 +1,14 @@
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #18181b;
+  margin-bottom: 4px;
+}
