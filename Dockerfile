@@ -1,28 +1,18 @@
-# ── Stage 1: Build ──────────────────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:20-alpine
 
 WORKDIR /app
 
-# Install dependencies first (layer cache friendly)
 COPY package*.json ./
 RUN npm ci
 
-# Copy source and build
 COPY . .
 RUN npm run build
 
-# ── Stage 2: Serve with Nginx ────────────────────────────────────────────────
-FROM nginx:stable-alpine
+# Install a simple static server
+RUN npm install -g serve
 
-# Remove default nginx static assets
-RUN rm -rf /usr/share/nginx/html/*
+EXPOSE 3000
 
-# Copy the built app from Stage 1
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Serve the 'dist' folder on port 3000
+CMD ["serve", "-s", "dist", "-l", "3000"]
 
-# Copy our custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
